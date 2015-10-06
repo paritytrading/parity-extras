@@ -7,9 +7,9 @@ import java.net.StandardProtocolFamily;
 import java.net.StandardSocketOptions;
 import java.nio.channels.DatagramChannel;
 import org.jvirtanen.nassau.MessageListener;
+import org.jvirtanen.nassau.moldudp64.MoldUDP64Client;
 import org.jvirtanen.nassau.moldudp64.MoldUDP64ClientState;
 import org.jvirtanen.nassau.moldudp64.MoldUDP64ClientStatusListener;
-import org.jvirtanen.nassau.moldudp64.MultiChannelMoldUDP64Client;
 import org.jvirtanen.parity.net.pmd.PMDParser;
 import org.jvirtanen.parity.top.Market;
 import org.jvirtanen.parity.top.MarketListener;
@@ -17,11 +17,12 @@ import org.jvirtanen.parity.top.Side;
 
 class MarketData {
 
-    private MultiChannelMoldUDP64Client transport;
+    private MoldUDP64Client transport;
 
     private TopOfBook topOfBook;
 
-    private MarketData(DatagramChannel channel, DatagramChannel requestChannel, long instrument) {
+    private MarketData(DatagramChannel channel, DatagramChannel requestChannel,
+            InetSocketAddress requestAddress, long instrument) {
         topOfBook = new TopOfBook();
 
         Market market = new Market(new MarketListener() {
@@ -62,8 +63,8 @@ class MarketData {
 
         };
 
-        transport = new MultiChannelMoldUDP64Client(channel, requestChannel,
-                listener, statusListener);
+        transport = new MoldUDP64Client(channel, requestChannel, requestAddress, listener,
+                statusListener);
     }
 
     public static MarketData open(NetworkInterface multicastInterface,
@@ -78,13 +79,12 @@ class MarketData {
 
         DatagramChannel requestChannel = DatagramChannel.open(StandardProtocolFamily.INET);
 
-        requestChannel.connect(requestAddress);
         requestChannel.configureBlocking(false);
 
-        return new MarketData(channel, requestChannel, instrument);
+        return new MarketData(channel, requestChannel, requestAddress, instrument);
     }
 
-    public MultiChannelMoldUDP64Client getTransport() {
+    public MoldUDP64Client getTransport() {
         return transport;
     }
 
