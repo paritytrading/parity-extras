@@ -73,6 +73,7 @@ class OrderEntry {
 
         @Override
         public void orderRejected(POE.OrderRejected message) {
+            error("Order rejected");
         }
 
         @Override
