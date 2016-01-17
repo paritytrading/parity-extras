@@ -43,12 +43,7 @@ class OrderEntry {
     }
 
     public void login(String username, String password) throws IOException {
-        SoupBinTCP.LoginRequest request = new SoupBinTCP.LoginRequest();
-
-        request.username = username;
-        request.password = password;
-        request.requestedSession = "";
-        request.requestedSequenceNumber = 0;
+        SoupBinTCP.LoginRequest request = new SoupBinTCP.LoginRequest(username, password, "", 0);
 
         transport.login(request);
     }
