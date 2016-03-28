@@ -88,20 +88,20 @@ class OrderEntry {
     private static class StatusListener implements SoupBinTCPClientStatusListener {
 
         @Override
-        public void heartbeatTimeout() {
+        public void heartbeatTimeout(SoupBinTCPClient session) {
             error("Heartbeat timeout");
         }
 
         @Override
-        public void endOfSession() {
+        public void endOfSession(SoupBinTCPClient session) {
         }
 
         @Override
-        public void loginAccepted(SoupBinTCP.LoginAccepted payload) {
+        public void loginAccepted(SoupBinTCPClient session, SoupBinTCP.LoginAccepted payload) {
         }
 
         @Override
-        public void loginRejected(SoupBinTCP.LoginRejected payload) {
+        public void loginRejected(SoupBinTCPClient session, SoupBinTCP.LoginRejected payload) {
             error("Login rejected");
         }
 
