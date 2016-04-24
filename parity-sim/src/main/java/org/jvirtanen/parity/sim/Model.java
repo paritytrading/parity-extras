@@ -1,10 +1,10 @@
 package org.jvirtanen.parity.sim;
 
+import com.paritytrading.parity.net.poe.POE;
 import java.io.IOException;
 import java.util.PriorityQueue;
 import java.util.Random;
 import org.apache.commons.math3.distribution.ExponentialDistribution;
-import org.jvirtanen.parity.net.poe.POE;
 
 class Model extends Agent {
 

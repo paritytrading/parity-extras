@@ -2,18 +2,18 @@ package org.jvirtanen.parity.sim;
 
 import static org.jvirtanen.util.Applications.*;
 
+import com.paritytrading.nassau.MessageListener;
+import com.paritytrading.nassau.soupbintcp.SoupBinTCP;
+import com.paritytrading.nassau.soupbintcp.SoupBinTCPClient;
+import com.paritytrading.nassau.soupbintcp.SoupBinTCPClientStatusListener;
+import com.paritytrading.parity.net.poe.POE;
+import com.paritytrading.parity.net.poe.POEClientListener;
+import com.paritytrading.parity.net.poe.POEClientParser;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.StandardSocketOptions;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
-import org.jvirtanen.nassau.MessageListener;
-import org.jvirtanen.nassau.soupbintcp.SoupBinTCP;
-import org.jvirtanen.nassau.soupbintcp.SoupBinTCPClient;
-import org.jvirtanen.nassau.soupbintcp.SoupBinTCPClientStatusListener;
-import org.jvirtanen.parity.net.poe.POE;
-import org.jvirtanen.parity.net.poe.POEClientListener;
-import org.jvirtanen.parity.net.poe.POEClientParser;
 
 class OrderEntry {
 

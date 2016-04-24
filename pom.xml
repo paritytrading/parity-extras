@@ -34,7 +34,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
-    <parity.version>0.2.0</parity.version>
+    <parity.version>0.4.0</parity.version>
   </properties>
 
   <modules>
@@ -47,6 +47,21 @@
         <groupId>com.paritytrading.foundation</groupId>
         <artifactId>foundation</artifactId>
         <version>0.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.paritytrading.nassau</groupId>
+        <artifactId>nassau</artifactId>
+        <version>0.9.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.paritytrading.parity</groupId>
+        <artifactId>parity-net</artifactId>
+        <version>${parity.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.paritytrading.parity</groupId>
+        <artifactId>parity-top</artifactId>
+        <version>${parity.version}</version>
       </dependency>
       <dependency>
         <groupId>com.typesafe</groupId>
@@ -62,21 +77,6 @@
         <groupId>org.jvirtanen.config</groupId>
         <artifactId>config-extras</artifactId>
         <version>0.1.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jvirtanen.nassau</groupId>
-        <artifactId>nassau</artifactId>
-        <version>0.8.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jvirtanen.parity</groupId>
-        <artifactId>parity-net</artifactId>
-        <version>${parity.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jvirtanen.parity</groupId>
-        <artifactId>parity-top</artifactId>
-        <version>${parity.version}</version>
       </dependency>
       <dependency>
         <groupId>org.jvirtanen.util</groupId>

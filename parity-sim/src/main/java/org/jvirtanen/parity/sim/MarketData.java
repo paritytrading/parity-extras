@@ -1,19 +1,19 @@
 package org.jvirtanen.parity.sim;
 
+import com.paritytrading.nassau.MessageListener;
+import com.paritytrading.nassau.moldudp64.MoldUDP64Client;
+import com.paritytrading.nassau.moldudp64.MoldUDP64ClientState;
+import com.paritytrading.nassau.moldudp64.MoldUDP64ClientStatusListener;
+import com.paritytrading.parity.net.pmd.PMDParser;
+import com.paritytrading.parity.top.Market;
+import com.paritytrading.parity.top.MarketListener;
+import com.paritytrading.parity.top.Side;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
 import java.net.StandardProtocolFamily;
 import java.net.StandardSocketOptions;
 import java.nio.channels.DatagramChannel;
-import org.jvirtanen.nassau.MessageListener;
-import org.jvirtanen.nassau.moldudp64.MoldUDP64Client;
-import org.jvirtanen.nassau.moldudp64.MoldUDP64ClientState;
-import org.jvirtanen.nassau.moldudp64.MoldUDP64ClientStatusListener;
-import org.jvirtanen.parity.net.pmd.PMDParser;
-import org.jvirtanen.parity.top.Market;
-import org.jvirtanen.parity.top.MarketListener;
-import org.jvirtanen.parity.top.Side;
 
 class MarketData {
 

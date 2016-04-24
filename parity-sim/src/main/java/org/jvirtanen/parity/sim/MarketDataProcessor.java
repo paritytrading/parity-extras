@@ -1,9 +1,9 @@
 package org.jvirtanen.parity.sim;
 
-import org.jvirtanen.parity.net.pmd.PMD;
-import org.jvirtanen.parity.net.pmd.PMDListener;
-import org.jvirtanen.parity.top.Market;
-import org.jvirtanen.parity.top.Side;
+import com.paritytrading.parity.net.pmd.PMD;
+import com.paritytrading.parity.net.pmd.PMDListener;
+import com.paritytrading.parity.top.Market;
+import com.paritytrading.parity.top.Side;
 
 class MarketDataProcessor implements PMDListener {
 

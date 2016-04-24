@@ -1,7 +1,7 @@
 package org.jvirtanen.parity.sim;
 
+import com.paritytrading.parity.net.poe.POE;
 import java.io.IOException;
-import org.jvirtanen.parity.net.poe.POE;
 
 class Open extends Agent {
 
