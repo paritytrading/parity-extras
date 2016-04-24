@@ -31,6 +31,10 @@
       <artifactId>parity-top</artifactId>
     </dependency>
     <dependency>
+      <groupId>com.paritytrading.parity</groupId>
+      <artifactId>parity-util</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.typesafe</groupId>
       <artifactId>config</artifactId>
     </dependency>

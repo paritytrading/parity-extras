@@ -1,6 +1,7 @@
 package org.jvirtanen.parity.sim;
 
 import com.paritytrading.nassau.soupbintcp.SoupBinTCPClient;
+import com.paritytrading.parity.util.OrderIDGenerator;
 import java.io.IOException;
 
 abstract class Agent {
