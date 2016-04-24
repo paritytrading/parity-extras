@@ -1,8 +1,8 @@
 package org.jvirtanen.parity.sim;
 
-import static org.jvirtanen.lang.Strings.*;
 import static org.jvirtanen.parity.util.Applications.*;
 
+import com.paritytrading.foundation.ASCII;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigException;
 import java.io.FileNotFoundException;
@@ -67,7 +67,7 @@ class Simulator {
         return MarketData.open(multicastInterface,
                 new InetSocketAddress(multicastGroup, multicastPort),
                 new InetSocketAddress(requestAddress, requestPort),
-                encodeLong(instrument));
+                ASCII.packLong(instrument));
     }
 
     private static OrderEntry orderEntry(Config config) throws IOException {
@@ -85,7 +85,7 @@ class Simulator {
 
         String instrument = config.getString("instrument");
 
-        return new Open(orderEntry(config), encodeLong(instrument),
+        return new Open(orderEntry(config), ASCII.packLong(instrument),
                 (long)(bidPrice * PRICE_FACTOR), bidSize,
                 (long)(askPrice * PRICE_FACTOR), askSize);
     }
@@ -93,7 +93,7 @@ class Simulator {
     private static Model model(Config config, Model.Config modelConfig) throws IOException {
         String instrument = config.getString("instrument");
 
-        return new Model(orderEntry(config), modelConfig, encodeLong(instrument));
+        return new Model(orderEntry(config), modelConfig, ASCII.packLong(instrument));
     }
 
     private static Model.Config modelConfig(Config config) {
