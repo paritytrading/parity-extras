@@ -1,6 +1,6 @@
 package org.jvirtanen.parity.sim;
 
-import static org.jvirtanen.parity.util.Applications.*;
+import static org.jvirtanen.util.Applications.*;
 
 import com.paritytrading.foundation.ASCII;
 import com.typesafe.config.Config;

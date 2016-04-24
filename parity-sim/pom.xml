@@ -43,8 +43,8 @@
       <artifactId>parity-top</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.jvirtanen.parity</groupId>
-      <artifactId>parity-util</artifactId>
+      <groupId>org.jvirtanen.util</groupId>
+      <artifactId>util-extras</artifactId>
     </dependency>
   </dependencies>
 

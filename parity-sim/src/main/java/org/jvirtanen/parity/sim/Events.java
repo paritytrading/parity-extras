@@ -1,6 +1,6 @@
 package org.jvirtanen.parity.sim;
 
-import static org.jvirtanen.parity.util.Applications.*;
+import static org.jvirtanen.util.Applications.*;
 
 import java.io.IOException;
 import java.nio.channels.SelectionKey;
