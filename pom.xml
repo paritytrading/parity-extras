@@ -79,11 +79,6 @@
         <version>${parity.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.jvirtanen.parity</groupId>
-        <artifactId>parity-util</artifactId>
-        <version>${parity.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.jvirtanen.util</groupId>
         <artifactId>util-extras</artifactId>
         <version>0.1.0</version>
