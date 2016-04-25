@@ -3,7 +3,7 @@ Parity Extras
 
 Parity Extras contains applications for [Parity Trading System][].
 
-  [Parity Trading System]: https://github.com/jvirtanen/parity
+  [Parity Trading System]: https://github.com/paritytrading/parity
 
 Parity Extras requires Java Runtime Environment (JRE) 8 or newer.
 
