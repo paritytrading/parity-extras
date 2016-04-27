@@ -1,4 +1,4 @@
-package org.jvirtanen.parity.sim;
+package com.paritytrading.parity.sim;
 
 import com.paritytrading.nassau.soupbintcp.SoupBinTCPClient;
 import com.paritytrading.parity.util.OrderIDGenerator;
