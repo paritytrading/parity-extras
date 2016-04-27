@@ -1,4 +1,4 @@
-package org.jvirtanen.parity.sim;
+package com.paritytrading.parity.sim;
 
 import com.paritytrading.parity.net.poe.POE;
 import java.io.IOException;

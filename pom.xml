@@ -9,14 +9,14 @@
     <version>7</version>
   </parent>
 
-  <groupId>org.jvirtanen.parity</groupId>
+  <groupId>com.paritytrading.parity</groupId>
   <artifactId>parity-extras-parent</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Parity Extras (Parent)</name>
   <description>Applications for Parity Trading System.</description>
-  <url>https://github.com/jvirtanen/parity-extras</url>
+  <url>https://github.com/paritytrading/parity-extras</url>
 
   <licenses>
     <license>
@@ -26,9 +26,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:jvirtanen/parity-extras.git</connection>
-    <developerConnection>scm:git:git@github.com:jvirtanen/parity-extras.git</developerConnection>
-    <url>https://github.com/jvirtanen/parity-extras</url>
+    <connection>scm:git:git@github.com:paritytrading/parity-extras.git</connection>
+    <developerConnection>scm:git:git@github.com:paritytrading/parity-extras.git</developerConnection>
+    <url>https://github.com/paritytrading/parity-extras</url>
   </scm>
 
   <properties>
@@ -149,7 +149,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
-          <excludePackageNames>org.jvirtanen.parity.sim</excludePackageNames>
+          <excludePackageNames>com.paritytrading.parity.sim</excludePackageNames>
           <links>
             <link>http://typesafehub.github.io/config/latest/api/</link>
           </links>

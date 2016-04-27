@@ -1,4 +1,4 @@
-package org.jvirtanen.parity.sim;
+package com.paritytrading.parity.sim;
 
 import com.paritytrading.parity.net.pmd.PMD;
 import com.paritytrading.parity.net.pmd.PMDListener;

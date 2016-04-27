@@ -1,4 +1,4 @@
-package org.jvirtanen.parity.sim;
+package com.paritytrading.parity.sim;
 
 import static org.jvirtanen.util.Applications.*;
 

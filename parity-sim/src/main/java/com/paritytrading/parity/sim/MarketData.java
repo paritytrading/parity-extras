@@ -1,4 +1,4 @@
-package org.jvirtanen.parity.sim;
+package com.paritytrading.parity.sim;
 
 import com.paritytrading.nassau.MessageListener;
 import com.paritytrading.nassau.moldudp64.MoldUDP64Client;
