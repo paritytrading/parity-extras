@@ -16,6 +16,17 @@ Parity Extras consists of the following applications:
   - [**Parity Simulator**](parity-sim) is a simple market event simulation
 
 
+Links
+-----
+
+For more information on Parity Extras:
+
+  - Follow [@paritytrading](https://twitter.com/paritytrading) on Twitter for
+    news and announcements
+  - Join [paritytrading/chat](https://gitter.im/paritytrading/chat) on Gitter
+    for discussions
+
+
 License
 -------
 
