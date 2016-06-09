@@ -20,7 +20,7 @@ References
 
 Parity Simulator is based on the following paper:
 
-  - T.X. Guo. _An agent-based simulation of double-auction markets_. 2005.
+- T.X. Guo. _An agent-based simulation of double-auction markets_. 2005.
 
 
 License

@@ -13,7 +13,7 @@ Features
 
 Parity Extras consists of the following applications:
 
-  - [**Parity Simulator**](parity-sim) is a simple market event simulation
+- [**Parity Simulator**](parity-sim) is a simple market event simulation
 
 
 Links
@@ -21,12 +21,12 @@ Links
 
 For more information on Parity Extras:
 
-  - See [Parity Guide](https://github.com/paritytrading/documentation) for
-    the user and developer documentation
-  - Follow [@paritytrading](https://twitter.com/paritytrading) on Twitter for
-    news and announcements
-  - Join [paritytrading/chat](https://gitter.im/paritytrading/chat) on Gitter
-    for discussions
+- See [Parity Guide](https://github.com/paritytrading/documentation) for the
+  user and developer documentation
+- Follow [@paritytrading](https://twitter.com/paritytrading) on Twitter for
+  news and announcements
+- Join [paritytrading/chat](https://gitter.im/paritytrading/chat) on Gitter
+  for discussions
 
 
 License
