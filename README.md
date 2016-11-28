@@ -13,7 +13,7 @@ Features
 
 Parity Extras consists of the following applications:
 
-- [**Parity Simulator**](parity-sim) is a simple market event simulation
+- [**Parity Market Simulator**](parity-sim) is a simple market event simulation
 
 
 Links

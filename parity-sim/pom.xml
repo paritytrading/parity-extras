@@ -11,7 +11,7 @@
 
   <artifactId>parity-sim</artifactId>
 
-  <name>Parity Simulator</name>
+  <name>Parity Market Simulator</name>
 
   <dependencies>
     <dependency>
