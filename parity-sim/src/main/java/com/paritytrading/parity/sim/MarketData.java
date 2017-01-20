@@ -4,10 +4,11 @@ import com.paritytrading.nassau.MessageListener;
 import com.paritytrading.nassau.moldudp64.MoldUDP64Client;
 import com.paritytrading.nassau.moldudp64.MoldUDP64ClientState;
 import com.paritytrading.nassau.moldudp64.MoldUDP64ClientStatusListener;
+import com.paritytrading.parity.book.Market;
+import com.paritytrading.parity.book.MarketListener;
+import com.paritytrading.parity.book.OrderBook;
+import com.paritytrading.parity.book.Side;
 import com.paritytrading.parity.net.pmd.PMDParser;
-import com.paritytrading.parity.top.Market;
-import com.paritytrading.parity.top.MarketListener;
-import com.paritytrading.parity.top.Side;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
@@ -28,13 +29,16 @@ class MarketData {
         Market market = new Market(new MarketListener() {
 
             @Override
-            public void bbo(long instrument, long bidPrice, long bidSize, long askPrice, long askSize) {
-                topOfBook.bidPrice = bidPrice;
-                topOfBook.askPrice = askPrice;
+            public void update(OrderBook book, boolean bbo) {
+                if (!bbo)
+                    return;
+
+                topOfBook.bidPrice = book.getBestBidPrice();
+                topOfBook.askPrice = book.getBestAskPrice();
             }
 
             @Override
-            public void trade(long instrument, Side side, long price, long size) {
+            public void trade(OrderBook book, Side side, long price, long size) {
             }
 
         });
@@ -50,7 +54,7 @@ class MarketData {
             }
 
             @Override
-            public void downstream(MoldUDP64Client session) {
+            public void downstream(MoldUDP64Client session, long sequenceNumber, int messageCount) {
             }
 
             @Override

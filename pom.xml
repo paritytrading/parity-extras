@@ -34,7 +34,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.8</java.version>
-    <parity.version>0.4.0</parity.version>
+    <parity.version>0.6.0</parity.version>
   </properties>
 
   <modules>
@@ -50,17 +50,17 @@
       </dependency>
       <dependency>
         <groupId>com.paritytrading.nassau</groupId>
-        <artifactId>nassau</artifactId>
-        <version>0.9.0</version>
+        <artifactId>nassau-core</artifactId>
+        <version>0.13.0</version>
       </dependency>
       <dependency>
         <groupId>com.paritytrading.parity</groupId>
-        <artifactId>parity-net</artifactId>
+        <artifactId>parity-book</artifactId>
         <version>${parity.version}</version>
       </dependency>
       <dependency>
         <groupId>com.paritytrading.parity</groupId>
-        <artifactId>parity-top</artifactId>
+        <artifactId>parity-net</artifactId>
         <version>${parity.version}</version>
       </dependency>
       <dependency>

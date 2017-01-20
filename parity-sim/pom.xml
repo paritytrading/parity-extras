@@ -20,15 +20,15 @@
     </dependency>
     <dependency>
       <groupId>com.paritytrading.nassau</groupId>
-      <artifactId>nassau</artifactId>
+      <artifactId>nassau-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.paritytrading.parity</groupId>
+      <artifactId>parity-book</artifactId>
     </dependency>
     <dependency>
       <groupId>com.paritytrading.parity</groupId>
       <artifactId>parity-net</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.paritytrading.parity</groupId>
-      <artifactId>parity-top</artifactId>
     </dependency>
     <dependency>
       <groupId>com.paritytrading.parity</groupId>

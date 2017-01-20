@@ -1,5 +1,6 @@
 package com.paritytrading.parity.sim;
 
+import com.paritytrading.foundation.ASCII;
 import com.paritytrading.parity.net.poe.POE;
 import java.io.IOException;
 
@@ -14,7 +15,7 @@ class Open extends Agent {
 
         this.enterBuyOrder = new POE.EnterOrder();
 
-        this.enterBuyOrder.orderId    = orderId.next();
+        ASCII.putLeft(this.enterBuyOrder.orderId, orderId.next());
         this.enterBuyOrder.side       = POE.BUY;
         this.enterBuyOrder.instrument = instrument;
         this.enterBuyOrder.quantity   = bidSize;
@@ -22,7 +23,7 @@ class Open extends Agent {
 
         this.enterSellOrder = new POE.EnterOrder();
 
-        this.enterSellOrder.orderId    = orderId.next();
+        ASCII.putLeft(this.enterSellOrder.orderId, orderId.next());
         this.enterSellOrder.side       = POE.SELL;
         this.enterSellOrder.instrument = instrument;
         this.enterSellOrder.quantity   = askSize;

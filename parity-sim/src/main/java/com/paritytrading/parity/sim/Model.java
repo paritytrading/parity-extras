@@ -1,5 +1,6 @@
 package com.paritytrading.parity.sim;
 
+import com.paritytrading.foundation.ASCII;
 import com.paritytrading.parity.net.poe.POE;
 import java.io.IOException;
 import java.util.PriorityQueue;
@@ -114,19 +115,19 @@ class Model extends Agent {
     private void enter(byte side, double price, long currentTimeMillis) throws IOException {
         enter(side, price);
 
-        orders.offer(new Order(enterOrder.orderId, scheduleExpiration(currentTimeMillis)));
+        orders.offer(new Order(ASCII.get(enterOrder.orderId), scheduleExpiration(currentTimeMillis)));
     }
 
     private void enter(byte side, double price) throws IOException {
-        enterOrder.orderId = orderId.next();
-        enterOrder.side    = side;
-        enterOrder.price   = (long)(price * PRICE_FACTOR);
+        ASCII.putLeft(enterOrder.orderId, orderId.next());
+        enterOrder.side  = side;
+        enterOrder.price = (long)(price * PRICE_FACTOR);
 
         getOrderEntry().send(enterOrder);
     }
 
     private void cancel(String orderId) throws IOException {
-        cancelOrder.orderId  = orderId;
+        ASCII.putLeft(cancelOrder.orderId, orderId);
         cancelOrder.quantity = 0;
 
         getOrderEntry().send(cancelOrder);

@@ -2,6 +2,7 @@ package com.paritytrading.parity.sim;
 
 import static org.jvirtanen.util.Applications.*;
 
+import com.paritytrading.foundation.ASCII;
 import com.paritytrading.nassau.MessageListener;
 import com.paritytrading.nassau.soupbintcp.SoupBinTCP;
 import com.paritytrading.nassau.soupbintcp.SoupBinTCPClient;
@@ -43,7 +44,12 @@ class OrderEntry {
     }
 
     public void login(String username, String password) throws IOException {
-        SoupBinTCP.LoginRequest request = new SoupBinTCP.LoginRequest(username, password, "", 0);
+        SoupBinTCP.LoginRequest request = new SoupBinTCP.LoginRequest();
+
+        ASCII.putLeft(request.username, username);
+        ASCII.putLeft(request.password, password);
+        ASCII.putRight(request.requestedSession, "");
+        ASCII.putLongRight(request.requestedSequenceNumber, 0);
 
         transport.login(request);
     }

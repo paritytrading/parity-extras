@@ -1,9 +1,9 @@
 package com.paritytrading.parity.sim;
 
+import com.paritytrading.parity.book.Market;
+import com.paritytrading.parity.book.Side;
 import com.paritytrading.parity.net.pmd.PMD;
 import com.paritytrading.parity.net.pmd.PMDListener;
-import com.paritytrading.parity.top.Market;
-import com.paritytrading.parity.top.Side;
 
 class MarketDataProcessor implements PMDListener {
 
