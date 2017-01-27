@@ -9,8 +9,6 @@ import org.apache.commons.math3.distribution.ExponentialDistribution;
 
 class Model extends Agent {
 
-    private static final double PRICE_FACTOR = 10000.0;
-
     private Config config;
 
     private POE.EnterOrder  enterOrder;
@@ -57,8 +55,8 @@ class Model extends Agent {
         if (currentTimeMillis < sleepUntilMillis)
             return;
 
-        double askPrice = topOfBook.getAskPrice() / PRICE_FACTOR;
-        double bidPrice = topOfBook.getBidPrice() / PRICE_FACTOR;
+        double askPrice = topOfBook.getAskPrice() / 10000.0;
+        double bidPrice = topOfBook.getBidPrice() / 10000.0;
 
         if (uniformDistribution.nextDouble() < config.p()) {
             if (uniformDistribution.nextBoolean()) {
@@ -107,9 +105,7 @@ class Model extends Agent {
     }
 
     private double price(double min, double max) {
-        double price = min + (max - min) * uniformDistribution.nextDouble();
-
-        return Math.round(price * 100.0) / 100.0;
+        return min + (max - min) * uniformDistribution.nextDouble();
     }
 
     private void enter(byte side, double price, long currentTimeMillis) throws IOException {
@@ -121,7 +117,7 @@ class Model extends Agent {
     private void enter(byte side, double price) throws IOException {
         ASCII.putLeft(enterOrder.orderId, orderId.next());
         enterOrder.side  = side;
-        enterOrder.price = (long)(price * PRICE_FACTOR);
+        enterOrder.price = (long)Math.round(price * 100.0) * 100;
 
         getOrderEntry().send(enterOrder);
     }
