@@ -25,7 +25,7 @@ class OrderEntry {
     private OrderEntry(SoupBinTCPClient transport) {
         this.transport = transport;
 
-        this.txBuffer = ByteBuffer.allocate(POE.MAX_INBOUND_MESSAGE_LENGTH);
+        this.txBuffer = ByteBuffer.allocateDirect(POE.MAX_INBOUND_MESSAGE_LENGTH);
     }
 
     public static OrderEntry open(InetSocketAddress address) throws IOException {
