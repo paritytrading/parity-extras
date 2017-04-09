@@ -7,6 +7,7 @@
     <groupId>com.paritytrading.parity</groupId>
     <artifactId>parity-extras-parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
   </parent>
 
   <artifactId>parity-sim</artifactId>

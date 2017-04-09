@@ -10,7 +10,8 @@ Parity Extras requires Java Runtime Environment (JRE) 8 or newer.
 
 Parity Extras consists of the following applications:
 
-- [**Parity Market Simulator**](parity-sim) is a simple market event simulation
+- [**Parity Market Simulator**](applications/sim) is a simple market event
+  simulation
 
 ## Links
 

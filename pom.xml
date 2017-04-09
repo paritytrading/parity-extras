@@ -38,7 +38,7 @@
   </properties>
 
   <modules>
-    <module>parity-sim</module>
+    <module>applications/sim</module>
   </modules>
 
   <dependencyManagement>
