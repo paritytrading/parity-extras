@@ -1,5 +1,4 @@
-Parity Extras
-=============
+# Parity Extras
 
 Parity Extras contains applications for [Parity Trading System][].
 
@@ -7,17 +6,13 @@ Parity Extras contains applications for [Parity Trading System][].
 
 Parity Extras requires Java Runtime Environment (JRE) 8 or newer.
 
-
-Features
---------
+## Features
 
 Parity Extras consists of the following applications:
 
 - [**Parity Market Simulator**](parity-sim) is a simple market event simulation
 
-
-Links
------
+## Links
 
 For more information on Parity Extras:
 
@@ -28,9 +23,7 @@ For more information on Parity Extras:
 - Join [paritytrading/chat](https://gitter.im/paritytrading/chat) on Gitter
   for discussions
 
-
-License
--------
+## License
 
 Copyright 2015 Jussi Virtanen.
 
