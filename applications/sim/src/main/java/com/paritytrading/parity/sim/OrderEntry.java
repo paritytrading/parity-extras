@@ -85,10 +85,6 @@ class OrderEntry {
         public void orderCanceled(POE.OrderCanceled message) {
         }
 
-        @Override
-        public void brokenTrade(POE.BrokenTrade message) {
-        }
-
     }
 
     private static class StatusListener implements SoupBinTCPClientStatusListener {

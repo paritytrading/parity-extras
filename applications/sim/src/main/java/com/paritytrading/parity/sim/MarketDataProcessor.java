@@ -18,10 +18,6 @@ class MarketDataProcessor implements PMDListener {
     }
 
     @Override
-    public void seconds(PMD.Seconds message) {
-    }
-
-    @Override
     public void orderAdded(PMD.OrderAdded message) {
         market.add(message.instrument, message.orderNumber, side(message.side),
                 message.price, message.quantity);
@@ -35,15 +31,6 @@ class MarketDataProcessor implements PMDListener {
     @Override
     public void orderCanceled(PMD.OrderCanceled message) {
         market.cancel(message.orderNumber, message.canceledQuantity);
-    }
-
-    @Override
-    public void orderDeleted(PMD.OrderDeleted message) {
-        market.delete(message.orderNumber);
-    }
-
-    @Override
-    public void brokenTrade(PMD.BrokenTrade message) {
     }
 
     private Side side(byte side) {
