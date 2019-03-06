@@ -11,6 +11,8 @@ class Model extends Agent {
 
     private Config config;
 
+    private double priceFactor;
+
     private POE.EnterOrder  enterOrder;
     private POE.CancelOrder cancelOrder;
 
@@ -23,15 +25,17 @@ class Model extends Agent {
 
     private long sleepUntilMillis;
 
-    public Model(OrderEntry orderEntry, Config config, long instrument) {
+    public Model(OrderEntry orderEntry, Config config, long instrument, long priceFactor, long sizeFactor) {
         super(orderEntry);
 
         this.config = config;
 
+        this.priceFactor = priceFactor;
+
         this.enterOrder = new POE.EnterOrder();
 
         this.enterOrder.instrument = instrument;
-        this.enterOrder.quantity   = config.sigma();
+        this.enterOrder.quantity   = (long)(config.sigma() * sizeFactor);
 
         this.cancelOrder = new POE.CancelOrder();
 
@@ -55,8 +59,8 @@ class Model extends Agent {
         if (currentTimeMillis < sleepUntilMillis)
             return;
 
-        double askPrice = topOfBook.getAskPrice() / 10000.0;
-        double bidPrice = topOfBook.getBidPrice() / 10000.0;
+        double askPrice = topOfBook.getAskPrice() / priceFactor;
+        double bidPrice = topOfBook.getBidPrice() / priceFactor;
 
         if (uniformDistribution.nextDouble() < config.p()) {
             if (uniformDistribution.nextBoolean()) {
@@ -117,7 +121,7 @@ class Model extends Agent {
     private void enter(byte side, double price) throws IOException {
         ASCII.putLeft(enterOrder.orderId, orderId.next());
         enterOrder.side  = side;
-        enterOrder.price = (long)Math.round(price * 100.0) * 100;
+        enterOrder.price = (long)Math.round(price * priceFactor);
 
         getOrderEntry().send(enterOrder);
     }
@@ -170,9 +174,9 @@ class Model extends Agent {
         private double s;
         private double mu;
         private double delta;
-        private long   sigma;
+        private double sigma;
 
-        public Config(double n, double s, double mu, double delta, long sigma) {
+        public Config(double n, double s, double mu, double delta, double sigma) {
             this.n     = n;
             this.s     = s;
             this.mu    = mu;
@@ -196,7 +200,7 @@ class Model extends Agent {
             return delta;
         }
 
-        public long sigma() {
+        public double sigma() {
             return sigma;
         }
 
