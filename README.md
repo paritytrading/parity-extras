@@ -1,3 +1,6 @@
+> :warning: This repository is **archived** and no further development will
+> take place.
+
 # Parity Extras
 
 Parity Extras contains applications for [Parity Trading System][].
@@ -12,15 +15,6 @@ Parity Extras consists of the following applications:
 
 - [**Parity Market Simulator**](applications/sim) is a simple market event
   simulation
-
-## Links
-
-For more information on Parity Extras:
-
-- Follow [@paritytrading](https://twitter.com/paritytrading) on Twitter for
-  news and announcements
-- Join [paritytrading/chat](https://gitter.im/paritytrading/chat) on Gitter
-  for discussions
 
 ## License
 
